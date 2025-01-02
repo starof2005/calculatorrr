@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+}
+
+.display {
+    background: #333;
+    padding: 15px;
+    text-align: right;
+}
+
+.display input {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn {
+    background: #f7f7f7;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+
+
+.operator {
+    background: #ffd54f;
+}
+
+.equals {
+    background: #4caf50;
+    color: white;
+    grid-column: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/*chatgpt code*/
+
+.btn:active {
+    transform: scale(0.95);
+}
+.btn:hover {
+    background: #e0e0e0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.calculator {
+    animation: slideIn 0.5s ease-out;
+}
